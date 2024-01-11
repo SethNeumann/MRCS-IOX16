@@ -1,33 +1,14 @@
-# REPO NAME: EagleTemplate-new
-## License: CERN Open Hardware Licence v1.2
+# REPO NAME: MRCS-IOX16
+
 ## License: Creative Commons Attribution-NonCommercial-ShareAlike
 
-Delete one of the license lines above, and replace this line and following with the contents of the doc.md file
-
-### How to use this template:
-
-  1. Create a repo using this template, 
-  2. Use eagle to create your project
-  3. Edit the other text files to describe your project
-  4. git add .
-  5. git commit -m "add to git"
-  6. git tag -a 1.0 -m 1.0
-  7. git push origin 1.0
+The IOX16 provides an 16 additonal lines of i/o for the cpNode using the MCP23017 chip.
+IOX16 lines are configurable in as input or output in 8 bit (1 byte) increments.
+Up to 128 lines of i/o may be added to a cpNode in any combination of IOX16s and IOX32s for a total of 144 lines of i/o.
+Input and output voltages are limited to 5V.
+Each output may sink up to 25 mA subject to a device limit of 160mA, if all lines are used as output use 10mA as a design limit.
+Since the vast majority of outputs in a model railroad signaling system are used for driving LEDS, 10mA should be adequate.
+If you need to work with higher voltages or currents, use the CSNK adapter in conjunction with the IOX16.
+Pads for inserting limiting resistors are provided for each line.
+Output pads are spaced at 0.100" to allow you maximum flexibility in configuring outputs.  
   
-
-This is a template for new eagle designs.
-It includes a blank schematic with a title block ready for editing and a
-default PCB that uses the SPCoast.lbr's BOARD component, Fiducials and an OSHW logo.
-
-First line: A short description of the project, used as a subtitle or tagline
-
-Remaining lines: a verbose changelog of what makes this "git version" different from the last.
-Use this space (in Markdown format) to describe the context and details of the changes.
-This section should be 5 to 20 lines of interesting detail; each version tab in the project will 
-display this text to help the reader understand why this version is differnet...
-
-The published project on the SPCoast.github.io website will
-include the relevant git commit messages as a terse, high level
-changelog, so don't replicate those messages here.
-
-
